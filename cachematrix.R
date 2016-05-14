@@ -1,7 +1,7 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## function to pecial "matrix" object
+## function to special "matrix" object
 
 makeCacheMatrix <- function(x = matrix()) {
   s <- NULL
@@ -10,15 +10,15 @@ makeCacheMatrix <- function(x = matrix()) {
     s <<- NULL
   }
   get <- function() x
-  setmean <- function(solve) s <<- solve
-  getmean <- function() s
+  setsolve <- function(solve) s <<- solve
+  getsolve <- function() s
   list(set = set, get = get,
-       setmean = setsolve,
-       getmean = getsolve)
+       setsolve = setsolve,
+       getsolve = getsolve)
 }
 
 
-## function tocompute the inverse of the special "matrix" 
+## function to compute the inverse of the special "matrix" 
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
